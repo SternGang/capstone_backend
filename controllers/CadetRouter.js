@@ -33,7 +33,7 @@ cadetsRouter.post('/', (request, response, next) => {
             name: body.name,
             rank: body.rank,
             class: body.class,
-            email:body.email,
+            email:body.userEmail,
             Password: body.Password
         }
     )
