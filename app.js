@@ -17,7 +17,7 @@ const Cadet = require("./database/models/Cadet")
 const cors = require('cors')
 const SpecialRouter = require('./controllers/SpecialRouter');
 const BoneRouter = require('./controllers/BoneRouter');
-const cadetRouter = require("./controllers/cadetRouter");
+const cadetRouter = require("./controllers/CadetRouter");
 const middleware = require('./utils/middleware')
 
 db.sequelize.authenticate()
