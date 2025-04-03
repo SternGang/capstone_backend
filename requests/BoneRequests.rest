@@ -1,0 +1,22 @@
+### get all resources 
+GET http://localhost:8080/api/Bones
+
+### get single resource 
+GET http://localhost:8080/api/Bones/
+
+### create resource 
+POST http://localhost:8080/api/Bones HTTP/1.1 content-type: application/json
+
+{
+"name": "Joe Smith", "rank": "PVT", "class": "2025"
+}
+
+### update resource 
+PUT http://localhost:8080/api/Bones/ content-type: application/json
+
+{
+"name": "Joe Smith", "rank": "PVT", "class": "2022"
+}
+
+### delete resource 
+DELETE http://localhost:8080/api/Bones/

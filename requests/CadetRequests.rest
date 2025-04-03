@@ -1,0 +1,23 @@
+###get all resources GET 
+GET http://localhost:8080/api/Cadets
+
+###
+POST http://localhost:8080/api/Cadets HTTP/1.1
+content-type: application/json
+
+{
+"name": "Max Kleeberg", 
+"rank": "CPT", 
+"class": "2025",
+"Password":"IL0veWaifus"
+}
+
+###update resource 
+PUT http://localhost:8080/api/Cadets/ content-type: application/json
+
+{
+"name": "Joe Smith", "rank": "PVT", "class": "2022", "Password": "1234"
+}
+
+###delete resource 
+DELETE http://localhost:8080/api/Cadets/
