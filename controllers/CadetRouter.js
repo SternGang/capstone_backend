@@ -24,6 +24,18 @@ cadetsRouter.get('/:id', (request, response, next) => {
         .catch(error => next(error));
 })
 
+// this route returns resource matching the id provided in the request
+cadetsRouter.get('/email/:email', (request, response, next) => {
+    Cadet.findOne({ where: { userEmail: request.params.email }})
+        .then(cadet => {
+            if (cadet) {
+                response.json(cadet)
+            } else {
+                response.status(404).end()
+            }
+        })
+        .catch(error => next(error));
+})
 // this route creates a new resource using the information provided in the body of the request
 cadetsRouter.post('/', (request, response, next) => {
     const body = request.body
@@ -33,7 +45,7 @@ cadetsRouter.post('/', (request, response, next) => {
             name: body.name,
             rank: body.rank,
             class: body.class,
-            email:body.userEmail,
+            userEmail:body.userEmail,
             Password: body.Password
         }
     )
@@ -67,6 +79,7 @@ cadetsRouter.put('/:id', (request, response, next) => {
             name: body.name,
             rank: body.rank,
             class: body.class,
+            userEmail:body.userEmail,
             Password: body.Password
         },
         {
