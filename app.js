@@ -18,7 +18,8 @@ const cors = require('cors')
 const SpecialRouter = require('./controllers/SpecialRouter');
 const BoneRouter = require('./controllers/BoneRouter');
 const cadetRouter = require("./controllers/CadetRouter");
-const middleware = require('./utils/middleware')
+const middleware = require('./utils/middleware');
+const EventsRouter = require('./controllers/EventRouter');
 
 db.sequelize.authenticate()
     .then(() => {
@@ -31,6 +32,7 @@ db.sequelize.authenticate()
 Special.sync({ alter: true });
 Bone.sync({ alter: true });
 Cadet.sync({ alter: true });
+Event.sync({ alter: true });
 
 app.use(cors());
 app.use(express.json());
@@ -38,6 +40,7 @@ app.use(middleware.requestLogger);
 app.use('/api/Specials', SpecialRouter)
 app.use('/api/Bones', BoneRouter)
 app.use('/api/Cadets', cadetRouter);
+app.use('/api/Events', EventsRouter);
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
 app.listen(config.PORT, () => {
