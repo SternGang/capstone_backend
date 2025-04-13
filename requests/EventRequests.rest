@@ -1,0 +1,13 @@
+###get all resources GET 
+GET http://localhost:8080/api/Events
+
+### Get by eventID
+GET http://localhost:8080/api/Events/EventID
+
+POST http://localhost:8080/api/Events HTTP/1.1
+content-type: application/json
+
+{
+"CadetID": "1111", 
+"BoneCode": "1111"
+}
