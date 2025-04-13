@@ -1,6 +1,9 @@
 ###get all resources GET 
 GET http://localhost:8080/api/Cadets
 
+###get single email 
+GET http://localhost:8080/api/Cadets/email/smithj25@vmi.edu
+
 ###
 POST http://localhost:8080/api/Cadets HTTP/1.1
 content-type: application/json
@@ -13,10 +16,18 @@ content-type: application/json
 }
 
 ###update resource 
-PUT http://localhost:8080/api/Cadets/ content-type: application/json
+PUT http://localhost:8080/api/Cadets/dd9b02d7-888f-4c4c-9e8e-4a055e741c70
+content-type: application/json
 
 {
-"name": "Joe Smith", "rank": "PVT", "class": "2022", "Password": "1234"
+    "id": "dd9b02d7-888f-4c4c-9e8e-4a055e741c70",
+    "name": "Joe Smith",
+    "rank": "PVT",
+    "class": "2025",
+    "userEmail": "smithj25@vmi.edu",
+    "Password": "1234",
+    "createdAt": "2025-04-01T14:08:46.099Z",
+    "updatedAt": "2025-04-01T14:08:46.099Z"
 }
 
 ###delete resource 

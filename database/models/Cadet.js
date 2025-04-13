@@ -24,7 +24,7 @@ const Cadet = db.sequelize.define('Cadet', {
   },
   userEmail:{
     type:DataTypes.STRING,
-    allowNull: false
+    allowNull: true
   },
   Password:{
     type: DataTypes.STRING,
