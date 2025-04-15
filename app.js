@@ -12,14 +12,15 @@ const db = require("./database/db")
 const Special = require("./database/models/Special")
 const Bone = require("./database/models/Bone")
 const Cadet = require("./database/models/Cadet")
+const Event = require("./database/models/Event")
 
 // import cors, router, and middleware components
 const cors = require('cors')
 const SpecialRouter = require('./controllers/SpecialRouter');
 const BoneRouter = require('./controllers/BoneRouter');
 const cadetRouter = require("./controllers/CadetRouter");
-const middleware = require('./utils/middleware');
 const EventsRouter = require('./controllers/EventRouter');
+const middleware = require('./utils/middleware');
 
 db.sequelize.authenticate()
     .then(() => {
@@ -32,7 +33,7 @@ db.sequelize.authenticate()
 Special.sync({ alter: true });
 Bone.sync({ alter: true });
 Cadet.sync({ alter: true });
-Event.sync({ alter: true });
+Event.sync({alter: true});
 
 app.use(cors());
 app.use(express.json());
