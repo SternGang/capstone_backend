@@ -2,13 +2,14 @@
 GET http://localhost:8080/api/Bones
 
 ### get single resource 
-GET http://localhost:8080/api/Bones/
+GET http://localhost:8080/api/Bones
 
 ### create resource 
-POST http://localhost:8080/api/Bones HTTP/1.1 content-type: application/json
+POST http://localhost:8080/api/Bones HTTP/1.1
+content-type: application/json
 
 {
-"name": "Joe Smith", "rank": "PVT", "class": "2025"
+"Name": "Unshaven", "Demerits": "1", "PenaltyTours": "1"
 }
 
 ### update resource 

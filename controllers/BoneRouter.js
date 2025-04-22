@@ -29,7 +29,7 @@ BonesRouter.post('/', (request, response, next) => {
     const body = request.body
     Bone.create(
         {
-            BoneCodeID: body.BoneCodeID,
+            BoneCode: body.BoneCode,
             Name: body.Name,
             Demerits: body.Demerits,
             PenaltyTours: body.PenaltyTours 

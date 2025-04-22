@@ -5,10 +5,14 @@ const { DataTypes, UUID } = require('sequelize');
 // create a Cadet definition for the Note model
 const Bone = db.sequelize.define('Bone', {
   // create the primary key id column that is a UUID (contains entropy)
-  BoneCodeId: {
+  Id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
     primaryKey: true,
+  },
+  BoneCode:{
+    type: DataTypes.STRING,
+    allowNull: false
   },
   Name: {
     type: DataTypes.STRING,
