@@ -30,9 +30,8 @@ EventsRouter.post('/', (request, response, next) => {
     Event.create(
         {
             EventCodeID: body.EventCodeID,
-            Name: body.Name,
-            Demerits: body.Demerits,
-            PenaltyTours: body.PenaltyTours 
+            CadetID: body.CadetID,
+            BoneCode: body.BoneCode,
         }
     )
         .then(Event => {

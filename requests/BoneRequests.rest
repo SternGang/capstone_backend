@@ -9,7 +9,7 @@ POST http://localhost:8080/api/Bones HTTP/1.1
 content-type: application/json
 
 {
-"Name": "Unshaven", "Demerits": "1", "PenaltyTours": "1"
+"BoneCode": "1000","Name": "Unshaven", "Demerits": "1", "PenaltyTours": "1"
 }
 
 ### update resource 

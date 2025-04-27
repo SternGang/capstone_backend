@@ -4,6 +4,11 @@ GET http://localhost:8080/api/Cadets
 ###get single email 
 GET http://localhost:8080/api/Cadets/email/smithj25@vmi.edu
 
+###get name
+GET http://localhost:8080/api/Cadets/name/Raj Singh
+
+
+
 ###
 POST http://localhost:8080/api/Cadets HTTP/1.1
 content-type: application/json
